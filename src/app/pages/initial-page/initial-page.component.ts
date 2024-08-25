@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Player } from 'src/app/interfaces/player.interface';
 
 @Component({
   selector: 'app-initial-page',
@@ -7,4 +8,25 @@ import { Component } from '@angular/core';
 })
 export class InitialPageComponent {
 
-}
+  public Player: Player;
+
+  constructor() {
+    this.Player = {
+      gender: "Default",
+      race: "",
+      class: "",
+      alignment: ""
+
+    }
+  }
+
+  onMaleButton() {
+    this.Player.gender = "Male";
+    console.log(this.Player.gender)
+  }
+  onFemaleButton() {
+    this.Player.gender = "Female";
+    console.log(this.Player.gender)
+  }
+ }
+

@@ -2,6 +2,7 @@
 #title {
   font-family: 'Sherwood', sans-serif;
   color: rgb(206, 160, 20);
+  text-shadow: 2px black;
 }
 
 #title:hover {

@@ -1,16 +1,21 @@
-
 <div class="grid-container" style="margin: 40px 15px 0px 15px">
   <div class="left-div">
     <span>Gender</span>
-    <span>Gender</span>
-    <p>aaaaa</p>
+    <div style="display: flex; align-content: center;">
+      <button (click)='onMaleButton()'>
+        <img src="assets/male.png" alt="Male gender" />
+      </button>
+      <button (click)='onFemaleButton()'>
+        <img src="assets/female.png" alt="Female gender" />
+      </button>
+    </div>
 
   </div>
-  <div class="right-div">40% width content
-    <p>FRIKIPAPAS</p>
+  <div class="right-div">
+    <p *ngIf="Player.gender === 'Default'">This is an aesthetic choice and will not affect your attributes or skills in
+      any fashion. It can, however, affect whether or not an NPC becomes romantically interested in your character.</p>
+    <p *ngIf="Player.gender === 'Male'">Males of the Realms can excel in whatever profession they choose, whether wizardry, thievery, or the arts of war.</p>
+    <p *ngIf="Player.gender === 'Female'">Females of the Realms can excel in any area they wish, and are easily the equals of their male counterparts in every skill or respect.</p>
   </div>
 </div>
-<!-- crear 3 grids como en la imagen
- en la primera hay rows de clases
- en la segunda information de lo que se seleccione
- en la tercera la imagen solo -->
+
