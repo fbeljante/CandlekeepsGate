@@ -1,0 +1,10 @@
+
+#title {
+  font-family: 'Sherwood', sans-serif;
+  color: rgb(206, 160, 20);
+}
+
+#title:hover {
+  pointer-events: none;
+  user-select: none;
+}
