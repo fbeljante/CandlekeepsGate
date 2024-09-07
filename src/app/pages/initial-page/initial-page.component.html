@@ -12,10 +12,10 @@
 
   </div>
   <div class="right-div">
-    <p *ngIf="Player.gender === 'Default'">This is an aesthetic choice and will not affect your attributes or skills in
+    <p *ngIf="playerService.Player.gender === 'Default'">This is an aesthetic choice and will not affect your attributes or skills in
       any fashion. It can, however, affect whether or not an NPC becomes romantically interested in your character.</p>
-    <p *ngIf="Player.gender === 'Male'">Males of the Realms can excel in whatever profession they choose, whether wizardry, thievery, or the arts of war.</p>
-    <p *ngIf="Player.gender === 'Female'">Females of the Realms can excel in any area they wish, and are easily the equals of their male counterparts in every skill or respect.</p>
+    <p *ngIf="playerService.Player.gender === 'Male'">Males of the Realms can excel in whatever profession they choose, whether wizardry, thievery, or the arts of war.</p>
+    <p *ngIf="playerService.Player.gender === 'Female'">Females of the Realms can excel in any area they wish, and are easily the equals of their male counterparts in every skill or respect.</p>
   </div>
 </div>
 
