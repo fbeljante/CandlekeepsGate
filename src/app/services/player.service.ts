@@ -22,4 +22,7 @@ export class PlayerService {
   getPlayer(key: keyof Player, value: string) {
     this.Player[key] = value;
   }
+
+
+
 }

@@ -8,9 +8,22 @@
       <button (click)='onElfButton()'>
         <img src="assets/female.png" alt="Female gender" />
       </button>
+      <button (click)='onHalfElfButton()'>
+        GNOME HEHE
+      </button>
       <button (click)='onGnomeButton()'>
         GNOME HEHE
       </button>
+      <button (click)='onHalflingButton()'>
+        GNOME HEHE
+      </button>
+      <button (click)='onDwarfButton()'>
+        GNOME HEHE
+      </button>
+      <button (click)='onHalfOrcButton()'>
+        GNOME HEHE
+      </button>
+
     </div>
 
   </div>
@@ -19,27 +32,104 @@
       possible intrinsic talents such as infravision. Some restrictions in class selection may also apply, because game balance dictates
       that certain races are unsuite for certain professions.
     </p>
-    <p *ngIf="playerService.Player.race === 'Human'">HUMANS: Humans are the predominant race in Faerûn. Humans rule most of the significant empires and kingdoms in the Forgotten Realms.
+
+    <!-- HUMAN -->
+
+    <p *ngIf="playerService.Player.race === 'Human'"><strong>HUMANS</strong>: Humans are the predominant race in Faerûn. Humans rule most of the significant empires and kingdoms in the Forgotten Realms.
       They are the most social and tolerant of races, excepting perhaps the halflings.
       The only special abilitiy that humans possess is that they may advance as any class.
       Humans are also the only race that can dual-clas. Humans may not multi-class.
     </p>
-    <div *ngIf="playerService.Player.race === 'Elf'"> <p>ELVES: Elves tend to be shorter and slimmer than humans.
+
+
+    <!-- ELF -->
+
+    <div *ngIf="playerService.Player.race === 'Elf'"> <p><strong>ELVES</strong>: Elves tend to be shorter and slimmer than humans.
       Their features are finely chiseled and delicate, and they speak in melodic tones.
       Elves are looked upon as being frivolous and aloof.  They concern themselves with natural beauty, dancing, frolicking, and other similar pursuits.
       Their humor is clever as are their songs and poetry.
       There are six racial divisions of elves within the Realms: gold elves, moon elves, wild elves, sea elves, dark elves(drow), and winged elves (avariel).
       </p>
+      <p>Elves have the following traits:</p>
       <br>
-    <p>Elves have the following traits:</p>
-    <br>
-    <p>- 90% resistance against charm and sleep magics.</p>
-    <br>
-    <p>- Infravision</p>
-    <br>
-    <p>- +1 THAC0 bonus with bows and long swords.</p>
-    <br>
-    <p>- +1 Dexterity, -1 Cons</p>
+      <ul>
+        <li>- 90% resistance against charm and sleep magics.</li>
+        <li>- Infravision.</li>
+        <li>- +1 THAC0 bonus with bows and long swords.</li>
+        <li>- +1 Dexterity, -1 Constitution.</li>
+    </ul>
+    </div>
+
+    <!-- HALF-ELF -->
+
+    <div *ngIf="playerService.Player.race === 'Half-Elf'"> <p><strong>HALF-ELVES</strong>: Half-elves are a mix of human and elven blood. They are handsome folk,
+      with good features from each of their parent races. A half-elf has the curiosity, inventiveness, and ambition of their human ancestors
+      and the refined senses, love of nature, and artistic tastes of their elven ancestors.
+      </p>
+      <p>Half-elves have the following traits:</p>
+      <br>
+      <ul>
+        <li>- 30% resistance against charm and sleep magics.</li>
+        <li>- Infravision.</li>
+    </ul>
+    </div>
+
+    <!-- GNOME -->
+
+    <div *ngIf="playerService.Player.race === 'Gnome'"> <p><strong>GNOMES</strong>: Kin to dwarves, gnomes are noticeably smaller than their distant cousins. Gnomes, as they proudly maintain, are also less rotund than dwarves. Most have dark tan or brown skin, white hair, and rather larges noses.
+      Gnomes have lively and sly senses of humor, especially for practical jokes. They have a love for nature that is only matched by their love for gems and jewelry.
+      There are two racial divisions of gnomes within the Realms: rock gnomes and deep gnomes (svirfneblin).
+      </p>
+      <p>Gnomes have the following traits:</p>
+      <br>
+      <ul>
+        <li>- +2 bonus to Saving Throws vs. Rod/Staff/Wand and vs. Spell, with additional bonuses based on Constitution.</li>
+        <li>- Infravision.</li>
+        <li>- +1 Intelligence, -1 Wisdom.</li>
+    </ul>
+    </div>
+
+    <!-- HALFLING -->
+
+    <div *ngIf="playerService.Player.race === 'Halfling'"> <p><strong>HALFLINGS</strong>: Halflings are short, generally plump people, very much like small humans. Their faces are round and broad, and often quite florid.
+      Their hair is tipically curly, and the tops of their feet are covered with coarse hair.
+      Overall they prefer the comforts of home to dangerous adventuring. They enjoy good living, rough humor, and homespun tales.
+      There are three racial divisions of halflings within the Realms: the hairfoot, tallfellow, and stout.
+      </p>
+      <p>Halflings have the following traits:</p>
+      <br>
+      <ul>
+        <li>- +2 bonus to Saving Throws vs. Paralysis/Poison/Death, vs. Rod/Staff/Wand, and vs. Spell, with additional bonuses based on Constitution.</li>
+        <li>- +1 THAC0 bonus with slings.</li>
+        <li>- +1 Dexterity, -1 Strength, -1 Wisdom.</li>
+    </ul>
+    </div>
+
+    <!-- DWARF -->
+
+    <div *ngIf="playerService.Player.race === 'Dwarf'"> <p><strong>DWARVES</strong>: Dwarves are short and stocky, easily identifiable by their size and shape. They have ruddy cheeks, dark eyes, and dark hair.
+      Dwarves tend to be dour and taciturn. They are given to hard work, and care little for most humor. They enjoy beer, ale, mead, but most of all, they love gold.
+      There are four racial divisions of dwarves within the Realms: shield dwarves, gold dwarves, wild dwarves, and duergar.
+      </p>
+      <p>Dwarves have the following traits:</p>
+      <br>
+      <ul>
+        <li>- +2 bonus to Saving Throws vs. Paralysis/Poison/Death, vs. Rod/Staff/Wand, and vs. Spell, with additional bonuses based on Constitution.</li>
+        <li>- +1 THAC0 bonus with slings.</li>
+        <li>- +1 Constitution, -1 Dexterity, -2 Charisma.</li>
+    </ul>
+    </div>
+    <!-- HALF ORC -->
+
+    <div *ngIf="playerService.Player.race === 'Half-Orc'"> <p><strong>HALF-ORCS</strong>: Half-orcs are born from the union of human and orc parents. They are as tall as humans, but a little heavier due to their muscular builds.
+      Their greenish pigmentation, sloping forehead, jutting jaw, prominent teeth and coarse body hair make their lineage plain for all to see.
+      In the Sword Coast, half-orcs are tolerated, as unlike in the north the local people haven't had centuries of warfare with orc kind.
+      </p>
+      <p>Half-orcs have the following traits:</p>
+      <br>
+      <ul>
+        <li>- +1 Strength, -1 Constitution, -2 Intelligence.</li>
+    </ul>
     </div>
 
   </div>
